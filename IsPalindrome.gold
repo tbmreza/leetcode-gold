@@ -1,0 +1,27 @@
+function IsPalindrome(theInt : Int8) return Boolean
+   const ml_N_ = ', n=' multiLang
+   const mlReverse_ = 'reverse=' multiLang
+   
+   var n : Int8
+   var reverseX : Int8
+   
+   if theInt < 0
+      return False
+   endIf
+   if theInt < 10
+      return True
+   endIf
+   n = theInt
+   reverseX = 0
+   while n > 0
+      ; Reverse base-10 integer
+      reverseX = reverseX * 10 + n % 10
+      ; WriteLn(mlReverse_, reverseX, ml_N_, n)
+      n = n / 10
+   endWhile
+   if reverseX = theInt
+      _Result = True
+   else
+      _Result = False
+   endIf
+endFunc 

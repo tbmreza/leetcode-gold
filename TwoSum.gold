@@ -1,0 +1,35 @@
+type tArrayOf2Int4 : array [0 to 1] of Int4
+type tArrayOf10Int4 : array [0 to 10] of Int4
+
+
+function TwoSum(target : Int4) return tArrayOf2Int4
+   var result : tArrayOf2Int4
+   var nums : tArrayOf10Int4
+   var curNum1 : Int4
+   var curNum2 : Int4
+   
+   ; Will get back to this later.
+   result[0] = 0
+   result[1] = 0
+   nums[0] = 0
+   nums[1] = 2
+   nums[2] = 7
+   nums[3] = 0
+   nums[4] = 0
+   nums[5] = 0
+   nums[6] = 0
+   nums[7] = 0
+   nums[8] = 0
+   nums[9] = 0
+   for curNum1 = 0 to 8
+      for curNum2 = 1 to 9
+         if nums[curNum1] + nums[curNum2] = target
+            result[0] = curNum1
+            result[1] = curNum2
+            return result
+         endIf
+         curNum2++
+      endFor
+      curNum1++
+   endFor
+endFunc 

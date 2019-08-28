@@ -1,0 +1,8 @@
+function ReverseInteger(inputNum : Int8) return Int8
+
+  while inputNum <> 0
+    ; todo: Check for data type overflow.
+    _Result = _Result * 10 + inputNum % 10
+    inputNum = inputNum /10
+  endWhile
+endFunc

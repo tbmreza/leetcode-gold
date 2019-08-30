@@ -1,0 +1,78 @@
+; Leetcode (aFullObject) (Def Version:7) (Implem Version:9)
+
+class Leetcode (aFullObject) 
+
+type tArrayOf10Int4 : array [0 to 10] of Int4
+
+
+procedure SquareArrayElements(arrayLen : Int4, inOut inputArray : tArrayOf10Int4)
+   var temp : Int4
+   var curElement : Int4
+   
+   for curElement = 0 to arrayLen
+      temp = inputArray[curElement] * inputArray[curElement]
+      inputArray[curElement] = temp
+      WriteLn(inputArray[curElement])
+   endFor
+endProc 
+
+procedure Abs(inOut inputInt4 : Int4)
+   if inputInt4 < 0
+      inputInt4 = inputInt4 * -1
+   endIf
+endProc 
+
+procedure BubbleSort(arrayLen : Int4, inOut inputArray : tArrayOf10Int4)
+   var i : Int4
+   var curElement : Int4
+   var temp : Int4
+   
+   ; inputArray[0] = -4
+   ; inputArray[1] = -1
+   ; inputArray[2] = 0
+   ; inputArray[3] = 3
+   ; inputArray[4] = 10
+   ; inputArray[5] = 0
+   ; inputArray[6] = 13
+   ; inputArray[7] = 0
+   ; inputArray[8] = 0
+   ; inputArray[9] = 0
+   for i = 1 to arrayLen
+      for curElement = 0 to arrayLen - 1
+         if inputArray[curElement] > inputArray[curElement + 1]
+            temp = inputArray[curElement]
+            inputArray[curElement] = inputArray[curElement + 1]
+            inputArray[curElement + 1] = temp
+         else
+            inputArray[curElement] = inputArray[curElement]
+         endIf
+      endFor
+   endFor
+endProc 
+
+function SquaresOfSortedArray(inputArray : tArrayOf10Int4) return tArrayOf10Int4
+   ; * Input: [-4,-1,0,3,10]
+   ; * Output: [0,1,9,16,100]
+   var curElement : Int4
+   
+   inputArray[0] = -4
+   inputArray[1] = -1
+   inputArray[2] = 90
+   inputArray[3] = 3
+   inputArray[4] = 10
+   inputArray[5] = 10
+   inputArray[6] = 110
+   inputArray[7] = -1
+   inputArray[8] = 0
+   inputArray[9] = 1
+   ; inputArray = abs(inputArray)
+   for curElement = 0 to 9
+      self.Abs(inputArray[curElement])
+   endFor
+   ; inputArray = sort(inputArray)
+   self.BubbleSort(10, inputArray)
+   ; result = [a * a for a in inputArray]
+   self.SquareArrayElements(10, inputArray)
+   return inputArray
+endFunc 
+

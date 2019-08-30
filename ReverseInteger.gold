@@ -1,3 +1,7 @@
+; Leetcode (aFullObject) (Def Version:7) (Implem Version:9)
+
+class Leetcode (aFullObject) 
+
 function ReverseInteger(inputNum : Int8) return Int8
 
   while inputNum <> 0

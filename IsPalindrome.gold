@@ -1,3 +1,7 @@
+; Leetcode (aFullObject) (Def Version:7) (Implem Version:9)
+
+class Leetcode (aFullObject) 
+
 function IsPalindrome(theInt : Int8) return Boolean
    const ml_N_ = ', n=' multiLang
    const mlReverse_ = 'reverse=' multiLang
